@@ -236,7 +236,7 @@ console.log(
   "Utilizzando gli elementi presenti nell'array 'femaleCharacters' rimuovi dall'array 'charactersNames' le stringhe corrispondenti a personaggi con lo stesso nome. Una volta fatto crea un console.log per controllare la proprietà length di 'charactersNames' prima e dopo l'operazione."
 );
 console.log("Lunghezza prima:", charactersNames.length);
-
+charactersNames = charactersNames.filter((name) => !femaleCharacters.includes(name));
 console.log("Lunghezza dopo:", charactersNames.length);
 console.log("Nuovo array:", charactersNames);
 
@@ -246,3 +246,6 @@ console.log("--EXTRA-- ESERCIZIO 10");
 console.log(
   "Crea una funzionalità che selezioni un elemento casuale dall'array 'starWarsCharacters' e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento)."
 );
+let oggettoRandom = Math.floor(Math.random() * starWarsCharacters.length);
+let proprietàRandom = starWarsCharacters[oggettoRandom];
+console.log(proprietàRandom);
